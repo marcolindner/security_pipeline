@@ -23,11 +23,11 @@ jobs:
         run: |
           pip install flake8 bandit
 
-      - name: Run Flake8 for code quality
-        run: flake8 .
-
       - name: Run Bandit for security issues
         run: bandit -r .
+
+      - name: Run Flake8 for code quality
+        run: flake8 .
 
   build_and_scan_image:
     needs: code_quality_and_security_scan
