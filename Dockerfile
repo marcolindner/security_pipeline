@@ -1,17 +1,14 @@
 FROM ubuntu:22.04
 
-RUN apt-get update && \
-    apt-get install -y libgnutls30=3.7.3-4ubuntu1.4 libpam-modules=1.4.0-11ubuntu2.4 \
-    ssh \
+RUN apt-get install -y \
     wget \
     curl \
-    python3 && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+    python3
 
 WORKDIR /app
 COPY . .
 
+
 RUN chmod -R 755 /app
 
-CMD ["python3", "run.py"]
+CMD ["python3", "/app/main.py"]
