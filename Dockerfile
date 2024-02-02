@@ -1,7 +1,7 @@
-FROM ubuntu:22.04
+FROM ubuntu:latest
 
 RUN apt-get update && \
-    apt-get install -y libgnutls30=3.7.3-4ubuntu1.4 libpam-modules=1.4.0-11ubuntu2.4 \
+    apt-get install -y \
     wget \
     curl \
     python3 && \
