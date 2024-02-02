@@ -1,0 +1,175 @@
+2024-02-02T15:14:59.527Z	[34mINFO[0m	Need to update DB
+2024-02-02T15:14:59.527Z	[34mINFO[0m	Downloading DB...
+2024-02-02T15:15:10.902Z	[34mINFO[0m	Detected OS: ubuntu
+2024-02-02T15:15:10.902Z	[34mINFO[0m	Detecting Ubuntu vulnerabilities...
+2024-02-02T15:15:10.905Z	[34mINFO[0m	Number of PL dependency files: 0
+
+security_pipeline:latest (ubuntu 20.04)
+=======================================
+Total: 36 (UNKNOWN: 0, LOW: 23, MEDIUM: 13, HIGH: 0, CRITICAL: 0)
+
++----------------------+------------------+----------+--------------------------+---------------+---------------------------------------+
+|       LIBRARY        | VULNERABILITY ID | SEVERITY |    INSTALLED VERSION     | FIXED VERSION |                 TITLE                 |
++----------------------+------------------+----------+--------------------------+---------------+---------------------------------------+
+| coreutils            | CVE-2016-2781    | LOW      | 8.30-3ubuntu2            |               | coreutils: Non-privileged             |
+|                      |                  |          |                          |               | session can escape to the             |
+|                      |                  |          |                          |               | parent session in chroot              |
+|                      |                  |          |                          |               | -->avd.aquasec.com/nvd/cve-2016-2781  |
++----------------------+------------------+          +--------------------------+---------------+---------------------------------------+
+| gpgv                 | CVE-2022-3219    |          | 2.2.19-3ubuntu2.2        |               | gnupg: denial of service              |
+|                      |                  |          |                          |               | issue (resource consumption)          |
+|                      |                  |          |                          |               | using compressed packets              |
+|                      |                  |          |                          |               | -->avd.aquasec.com/nvd/cve-2022-3219  |
++----------------------+------------------+----------+--------------------------+---------------+---------------------------------------+
+| krb5-locales         | CVE-2021-36222   | MEDIUM   | 1.17-6ubuntu4.4          |               | krb5: Sending a request containing    |
+|                      |                  |          |                          |               | PA-ENCRYPTED-CHALLENGE padata         |
+|                      |                  |          |                          |               | element without using FAST could...   |
+|                      |                  |          |                          |               | -->avd.aquasec.com/nvd/cve-2021-36222 |
++                      +------------------+          +                          +---------------+---------------------------------------+
+|                      | CVE-2021-37750   |          |                          |               | krb5: NULL pointer dereference        |
+|                      |                  |          |                          |               | in process_tgs_req() in               |
+|                      |                  |          |                          |               | kdc/do_tgs_req.c via a FAST inner...  |
+|                      |                  |          |                          |               | -->avd.aquasec.com/nvd/cve-2021-37750 |
++----------------------+------------------+----------+--------------------------+---------------+---------------------------------------+
+| libc-bin             | CVE-2016-20013   | LOW      | 2.31-0ubuntu9.14         |               | sha256crypt and sha512crypt           |
+|                      |                  |          |                          |               | through 0.6 allow attackers           |
+|                      |                  |          |                          |               | to cause a denial of...               |
+|                      |                  |          |                          |               | -->avd.aquasec.com/nvd/cve-2016-20013 |
++----------------------+                  +          +                          +---------------+                                       +
+| libc6                |                  |          |                          |               |                                       |
+|                      |                  |          |                          |               |                                       |
+|                      |                  |          |                          |               |                                       |
+|                      |                  |          |                          |               |                                       |
++----------------------+------------------+----------+--------------------------+---------------+---------------------------------------+
+| libgssapi-krb5-2     | CVE-2021-36222   | MEDIUM   | 1.17-6ubuntu4.4          |               | krb5: Sending a request containing    |
+|                      |                  |          |                          |               | PA-ENCRYPTED-CHALLENGE padata         |
+|                      |                  |          |                          |               | element without using FAST could...   |
+|                      |                  |          |                          |               | -->avd.aquasec.com/nvd/cve-2021-36222 |
++                      +------------------+          +                          +---------------+---------------------------------------+
+|                      | CVE-2021-37750   |          |                          |               | krb5: NULL pointer dereference        |
+|                      |                  |          |                          |               | in process_tgs_req() in               |
+|                      |                  |          |                          |               | kdc/do_tgs_req.c via a FAST inner...  |
+|                      |                  |          |                          |               | -->avd.aquasec.com/nvd/cve-2021-37750 |
++----------------------+------------------+          +                          +---------------+---------------------------------------+
+| libk5crypto3         | CVE-2021-36222   |          |                          |               | krb5: Sending a request containing    |
+|                      |                  |          |                          |               | PA-ENCRYPTED-CHALLENGE padata         |
+|                      |                  |          |                          |               | element without using FAST could...   |
+|                      |                  |          |                          |               | -->avd.aquasec.com/nvd/cve-2021-36222 |
++                      +------------------+          +                          +---------------+---------------------------------------+
+|                      | CVE-2021-37750   |          |                          |               | krb5: NULL pointer dereference        |
+|                      |                  |          |                          |               | in process_tgs_req() in               |
+|                      |                  |          |                          |               | kdc/do_tgs_req.c via a FAST inner...  |
+|                      |                  |          |                          |               | -->avd.aquasec.com/nvd/cve-2021-37750 |
++----------------------+------------------+          +                          +---------------+---------------------------------------+
+| libkrb5-3            | CVE-2021-36222   |          |                          |               | krb5: Sending a request containing    |
+|                      |                  |          |                          |               | PA-ENCRYPTED-CHALLENGE padata         |
+|                      |                  |          |                          |               | element without using FAST could...   |
+|                      |                  |          |                          |               | -->avd.aquasec.com/nvd/cve-2021-36222 |
++                      +------------------+          +                          +---------------+---------------------------------------+
+|                      | CVE-2021-37750   |          |                          |               | krb5: NULL pointer dereference        |
+|                      |                  |          |                          |               | in process_tgs_req() in               |
+|                      |                  |          |                          |               | kdc/do_tgs_req.c via a FAST inner...  |
+|                      |                  |          |                          |               | -->avd.aquasec.com/nvd/cve-2021-37750 |
++----------------------+------------------+          +                          +---------------+---------------------------------------+
+| libkrb5support0      | CVE-2021-36222   |          |                          |               | krb5: Sending a request containing    |
+|                      |                  |          |                          |               | PA-ENCRYPTED-CHALLENGE padata         |
+|                      |                  |          |                          |               | element without using FAST could...   |
+|                      |                  |          |                          |               | -->avd.aquasec.com/nvd/cve-2021-36222 |
++                      +------------------+          +                          +---------------+---------------------------------------+
+|                      | CVE-2021-37750   |          |                          |               | krb5: NULL pointer dereference        |
+|                      |                  |          |                          |               | in process_tgs_req() in               |
+|                      |                  |          |                          |               | kdc/do_tgs_req.c via a FAST inner...  |
+|                      |                  |          |                          |               | -->avd.aquasec.com/nvd/cve-2021-37750 |
++----------------------+------------------+----------+--------------------------+---------------+---------------------------------------+
+| libncurses6          | CVE-2021-39537   | LOW      | 6.2-0ubuntu2.1           |               | ncurses: heap-based buffer overflow   |
+|                      |                  |          |                          |               | in _nc_captoinfo() in captoinfo.c     |
+|                      |                  |          |                          |               | -->avd.aquasec.com/nvd/cve-2021-39537 |
++                      +------------------+          +                          +---------------+---------------------------------------+
+|                      | CVE-2022-29458   |          |                          |               | ncurses: segfaulting OOB read         |
+|                      |                  |          |                          |               | -->avd.aquasec.com/nvd/cve-2022-29458 |
++----------------------+------------------+          +                          +---------------+---------------------------------------+
+| libncursesw6         | CVE-2021-39537   |          |                          |               | ncurses: heap-based buffer overflow   |
+|                      |                  |          |                          |               | in _nc_captoinfo() in captoinfo.c     |
+|                      |                  |          |                          |               | -->avd.aquasec.com/nvd/cve-2021-39537 |
++                      +------------------+          +                          +---------------+---------------------------------------+
+|                      | CVE-2022-29458   |          |                          |               | ncurses: segfaulting OOB read         |
+|                      |                  |          |                          |               | -->avd.aquasec.com/nvd/cve-2022-29458 |
++----------------------+------------------+          +--------------------------+---------------+---------------------------------------+
+| libpcre3             | CVE-2017-11164   |          | 2:8.39-12ubuntu0.1       |               | pcre: OP_KETRMAX feature in the       |
+|                      |                  |          |                          |               | match function in pcre_exec.c         |
+|                      |                  |          |                          |               | -->avd.aquasec.com/nvd/cve-2017-11164 |
++----------------------+------------------+          +--------------------------+---------------+---------------------------------------+
+| libpython3.8-minimal | CVE-2021-28861   |          | 3.8.10-0ubuntu1~20.04.9  |               | python: open redirection              |
+|                      |                  |          |                          |               | vulnerability in lib/http/server.py   |
+|                      |                  |          |                          |               | may lead to information disclosure    |
+|                      |                  |          |                          |               | -->avd.aquasec.com/nvd/cve-2021-28861 |
++----------------------+                  +          +                          +---------------+                                       +
+| libpython3.8-stdlib  |                  |          |                          |               |                                       |
+|                      |                  |          |                          |               |                                       |
+|                      |                  |          |                          |               |                                       |
+|                      |                  |          |                          |               |                                       |
++----------------------+------------------+----------+--------------------------+---------------+---------------------------------------+
+| libsystemd0          | CVE-2022-3821    | MEDIUM   | 245.4-4ubuntu3.23        |               | systemd: buffer overrun in            |
+|                      |                  |          |                          |               | format_timespan() function            |
+|                      |                  |          |                          |               | -->avd.aquasec.com/nvd/cve-2022-3821  |
++----------------------+------------------+----------+--------------------------+---------------+---------------------------------------+
+| libtinfo6            | CVE-2021-39537   | LOW      | 6.2-0ubuntu2.1           |               | ncurses: heap-based buffer overflow   |
+|                      |                  |          |                          |               | in _nc_captoinfo() in captoinfo.c     |
+|                      |                  |          |                          |               | -->avd.aquasec.com/nvd/cve-2021-39537 |
++                      +------------------+          +                          +---------------+---------------------------------------+
+|                      | CVE-2022-29458   |          |                          |               | ncurses: segfaulting OOB read         |
+|                      |                  |          |                          |               | -->avd.aquasec.com/nvd/cve-2022-29458 |
++----------------------+------------------+----------+--------------------------+---------------+---------------------------------------+
+| libudev1             | CVE-2022-3821    | MEDIUM   | 245.4-4ubuntu3.23        |               | systemd: buffer overrun in            |
+|                      |                  |          |                          |               | format_timespan() function            |
+|                      |                  |          |                          |               | -->avd.aquasec.com/nvd/cve-2022-3821  |
++----------------------+------------------+----------+--------------------------+---------------+---------------------------------------+
+| login                | CVE-2013-4235    | LOW      | 1:4.8.1-1ubuntu5.20.04.4 |               | shadow-utils: TOCTOU race             |
+|                      |                  |          |                          |               | conditions by copying and             |
+|                      |                  |          |                          |               | removing directory trees              |
+|                      |                  |          |                          |               | -->avd.aquasec.com/nvd/cve-2013-4235  |
++----------------------+------------------+          +--------------------------+---------------+---------------------------------------+
+| ncurses-base         | CVE-2021-39537   |          | 6.2-0ubuntu2.1           |               | ncurses: heap-based buffer overflow   |
+|                      |                  |          |                          |               | in _nc_captoinfo() in captoinfo.c     |
+|                      |                  |          |                          |               | -->avd.aquasec.com/nvd/cve-2021-39537 |
++                      +------------------+          +                          +---------------+---------------------------------------+
+|                      | CVE-2022-29458   |          |                          |               | ncurses: segfaulting OOB read         |
+|                      |                  |          |                          |               | -->avd.aquasec.com/nvd/cve-2022-29458 |
++----------------------+------------------+          +                          +---------------+---------------------------------------+
+| ncurses-bin          | CVE-2021-39537   |          |                          |               | ncurses: heap-based buffer overflow   |
+|                      |                  |          |                          |               | in _nc_captoinfo() in captoinfo.c     |
+|                      |                  |          |                          |               | -->avd.aquasec.com/nvd/cve-2021-39537 |
++                      +------------------+          +                          +---------------+---------------------------------------+
+|                      | CVE-2022-29458   |          |                          |               | ncurses: segfaulting OOB read         |
+|                      |                  |          |                          |               | -->avd.aquasec.com/nvd/cve-2022-29458 |
++----------------------+------------------+          +--------------------------+---------------+---------------------------------------+
+| openssh-client       | CVE-2020-14145   |          | 1:8.2p1-4ubuntu0.11      |               | openssh: Observable discrepancy       |
+|                      |                  |          |                          |               | leading to an information leak        |
+|                      |                  |          |                          |               | in the algorithm negotiation...       |
+|                      |                  |          |                          |               | -->avd.aquasec.com/nvd/cve-2020-14145 |
++                      +------------------+          +                          +---------------+---------------------------------------+
+|                      | CVE-2021-41617   |          |                          |               | openssh: privilege escalation         |
+|                      |                  |          |                          |               | when AuthorizedKeysCommand or         |
+|                      |                  |          |                          |               | AuthorizedPrincipalsCommand           |
+|                      |                  |          |                          |               | are configured                        |
+|                      |                  |          |                          |               | -->avd.aquasec.com/nvd/cve-2021-41617 |
++----------------------+------------------+          +--------------------------+---------------+---------------------------------------+
+| passwd               | CVE-2013-4235    |          | 1:4.8.1-1ubuntu5.20.04.4 |               | shadow-utils: TOCTOU race             |
+|                      |                  |          |                          |               | conditions by copying and             |
+|                      |                  |          |                          |               | removing directory trees              |
+|                      |                  |          |                          |               | -->avd.aquasec.com/nvd/cve-2013-4235  |
++----------------------+------------------+          +--------------------------+---------------+---------------------------------------+
+| python3.8            | CVE-2021-28861   |          | 3.8.10-0ubuntu1~20.04.9  |               | python: open redirection              |
+|                      |                  |          |                          |               | vulnerability in lib/http/server.py   |
+|                      |                  |          |                          |               | may lead to information disclosure    |
+|                      |                  |          |                          |               | -->avd.aquasec.com/nvd/cve-2021-28861 |
++----------------------+                  +          +                          +---------------+                                       +
+| python3.8-minimal    |                  |          |                          |               |                                       |
+|                      |                  |          |                          |               |                                       |
+|                      |                  |          |                          |               |                                       |
+|                      |                  |          |                          |               |                                       |
++----------------------+------------------+----------+--------------------------+---------------+---------------------------------------+
+| wget                 | CVE-2021-31879   | MEDIUM   | 1.20.3-1ubuntu2          |               | wget: authorization header            |
+|                      |                  |          |                          |               | disclosure on redirect                |
+|                      |                  |          |                          |               | -->avd.aquasec.com/nvd/cve-2021-31879 |
++----------------------+------------------+----------+--------------------------+---------------+---------------------------------------+
