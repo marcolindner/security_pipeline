@@ -1,8 +1,6 @@
-# app.py
-from flask import Flask, request
+from flask import Flask, request, abort, json
 import os
 import subprocess
-import pickle
 
 app = Flask(__name__)
 
@@ -10,21 +8,31 @@ app = Flask(__name__)
 def exec_command():
     # Direkte Ausführung von Benutzereingaben ohne Validierung
     command = request.args.get('cmd')
-    subprocess.call(command, shell=True)
+    if not command:
+        abort(400, "Invalid command")
+
+    subprocess.run(command, shell=True)
     return "Kommando ausgeführt\n"
 
 @app.route('/upload', methods=['POST'])
 def upload_file():
     # Unsichere Deserialisierung von Benutzereingaben
     file = request.files['file'].read()
-    data = pickle.loads(file)
-    return "Datei hochgeladen\n"
 
+    try:
+        data = json.loads(file.decode('utf-8'))
+    except json.JSONDecodeError:
+        abort(400, "Invalid file format")
+
+    return "Datei hochgeladen\n"
 @app.route('/run', methods=['POST'])
 def run_command():
     command = request.form['command']
     # Unsichere Verwendung von os.system für Benutzereingaben
-    os.system(command)
+    if not command:
+        abort(400, "Invalid command")
+
+    subprocess.run(command, shell=True)
     return "Kommando ausgeführt\n"
 
 if __name__ == '__main__':

@@ -1,12 +1,17 @@
 FROM ubuntu:19.04
 
-RUN apt-get install -y ssh \
+RUN apt-get update && \
+    apt-get install -y \
+    ssh \
     wget \
     curl \
-    python3
+    python3 && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
-COPY . /app
+WORKDIR /app
+COPY . .
 
-RUN chmod -R 777 /app
+RUN chmod -R 755 /app
 
-CMD ["python3", "/app/run.py"]
+CMD ["python3", "run.py"]
