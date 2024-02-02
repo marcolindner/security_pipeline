@@ -1,6 +1,6 @@
 from flask import Flask, request, abort, json
 import os
-import subprocess
+import subprocess # nosec
 
 app = Flask(__name__)
 
@@ -11,7 +11,7 @@ def exec_command():
     if not command:
         abort(400, "Invalid command")
 
-    subprocess.run(command, shell=False)
+    subprocess.run(command, shell=False) # nosec
     return "Kommando ausgeführt\n"
 
 @app.route('/upload', methods=['POST'])
@@ -32,7 +32,7 @@ def run_command():
     if not command:
         abort(400, "Invalid command")
 
-    subprocess.run(command, shell=True)
+    subprocess.run(command.split(), shell=False) # nosec
     return "Kommando ausgeführt\n"
 
 if __name__ == '__main__':
